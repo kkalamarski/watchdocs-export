@@ -1,0 +1,29 @@
+{
+  "name": "watchdocs-export",
+  "version": "1.0.0",
+  "description": "Watchdocs.io export microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "watchdocs",
+    "export",
+    "documentation",
+    "swagger",
+    "docs"
+  ],
+  "author": "Apicracy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "request": "^2.81.0",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0",
+    "watchdocs-express": "^1.0.3"
+  }
+}
