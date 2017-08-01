@@ -4,7 +4,7 @@
   "description": "Watchdocs.io export microservice",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --timeout=10000",
     "start": "node index.js"
   },
   "keywords": [
@@ -17,6 +17,7 @@
   "author": "Apicracy",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "ramda": "^0.24.1",
     "ramda-fantasy": "^0.8.0"

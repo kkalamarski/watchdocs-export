@@ -2,6 +2,7 @@ const express = require('express')
 const package = require('./package.json');
 const watchdocs = require('watchdocs-express')
 const app = express()
+const bodyParser = require('body-parser');
 
 const swagger = require('./src/swagger')
 
@@ -9,6 +10,8 @@ app.use(watchdocs({
   appId: 'WATCHDOCSIOEXPORTMICROSERVICEcdca2',
   appSecret: 'n31GrXX5fzg32rFLnz3jtHSMzFvSkR8NVP'
 }))
+
+app.use(bodyParser.json());
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
