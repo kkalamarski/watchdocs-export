@@ -10,6 +10,12 @@ app.use(watchdocs({
   appSecret: 'n31GrXX5fzg32rFLnz3jtHSMzFvSkR8NVP'
 }))
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+})
+
 app.get('/info', (req, res) => {
   res.json({
     name: package.name,
@@ -20,8 +26,11 @@ app.get('/info', (req, res) => {
 
 app.post('/export/swagger', swagger)
 
-app.listen('3001', () => {
+const server = app.listen('3001', () => {
   console.info('[Watchdocs.io]: Export microservice running on port 3001.')
 })
 
-module.exports = app;
+module.exports = {
+  app,
+  server
+};

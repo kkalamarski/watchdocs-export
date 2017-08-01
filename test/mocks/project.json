@@ -1,0 +1,11 @@
+{
+  "id":6,
+  "name":"WatchdocsBackend",
+  "base_url":"http://api.watchdocs.io/api/v1",
+  "updated_at":"2017-07-27T06:26:20.368Z",
+  "app_id":"wdb",
+  "app_secret":"9830123az",
+  "sample":null,
+  "slug":"watchdocsbackend-1",
+  "public":false
+}
